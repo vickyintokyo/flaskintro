@@ -73,4 +73,4 @@ def author_admin(authors_last_name):
 
 @app.errorhandler(404)
 def not_found(error):
-    return render_template('routing/404.html'), 404
+    return render_template('routing/404.html')

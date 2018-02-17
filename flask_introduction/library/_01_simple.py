@@ -22,4 +22,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Welcome to our Library!'
+    return 'Welcome to Vikram world!'
+
+@app.route('/vik')
+def say_name():
+    return 'Welcome to sarah world!'

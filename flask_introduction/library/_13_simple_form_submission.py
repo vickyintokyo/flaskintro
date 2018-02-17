@@ -7,8 +7,10 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def hello_world():
     if request.method == 'GET':
+        print ("hi")
         return render_template('forms/basic_form.html')
     elif request.method == 'POST':
+        print("hi1")
         kwargs = {
             'title': request.form['title'],
             'isbn': request.form['isbn'],

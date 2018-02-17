@@ -20,9 +20,15 @@ def hello_world():
     html = """
         <html>
             <h1>Welcome to {{library_name}} library!</h1>
+            <ul>
+                {% for author in vik %}
+                    <li>{{author}}</li>
+                {% endfor %}
+            </ul>
         </html>
     """
-    rendered_html = render_template_string(html, library_name=library_name)
-    authors = ["Alan Poe", "Jorge L. Borges", "Mark Twain"]
+    vik = ["Alan Poe", "Jorge L. Borges", "Mark Twain"]
+
+    rendered_html = render_template_string(html, library_name=library_name, vik = vik)
     # Using an <ul> tag add the authors using the template engine
     return rendered_html

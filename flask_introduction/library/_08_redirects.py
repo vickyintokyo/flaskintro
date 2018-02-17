@@ -16,13 +16,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return redirect(url_for('request_info'))
-
+    return redirect(url_for('info'))
 
 @app.route('/info')
 def info():
     return redirect(url_for('request_info'), code=301)
-
+# 301 is permanent redirect
+# 302 is temporary redirect
 
 @app.route('/request-info')
 def request_info():
